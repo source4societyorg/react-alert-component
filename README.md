@@ -6,7 +6,7 @@ Display an alert and style based on the type of alert.
 
 We recommending forking this repository and using as a submodule. To use as a git submodule in your project, navigate to your components directory and run:
 
-    git submodule add git@github.com:source4societyorg/react-alert-component.git 
+    git submodule add git@github.com:source4societyorg/react-alert-component.git Alert 
 
 Replace the url with the url of your fork as needed.
 
