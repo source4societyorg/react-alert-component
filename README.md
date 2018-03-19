@@ -1,23 +1,29 @@
+
 # react-alert-component
 
-Display an alert and style based on the type of alert.
+A simple alert presentation component that changes styles based on props. Works great with [react-scepter-alert-decorator](https://github.com/source4societyorg/react-scepter-alert-decorator).
 
-## Installation
+[![scepter-logo](http://res.cloudinary.com/source-4-society/image/upload/v1519221119/scepter_hzpcqt.png)](https://github.com/source4societyorg/SCEPTER-core)
 
-We recommending forking this repository and using as a submodule. To use as a git submodule in your project, navigate to your components directory and run:
+[![airbnb-codestyle](https://camo.githubusercontent.com/1c5c800fbdabc79cfaca8c90dd47022a5b5c7486/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f636f64652532307374796c652d616972626e622d627269676874677265656e2e7376673f7374796c653d666c61742d737175617265)](https://github.com/airbnb/javascript)
 
-    git submodule add git@github.com:source4societyorg/react-alert-component.git Alert 
+[![Build Status](https://travis-ci.org/source4societyorg/react-alert-component.svg?branch=master)](https://travis-ci.org/source4societyorg/react-alert-component)
 
-Replace the url with the url of your fork as needed.
+[![codecov](https://codecov.io/gh/source4societyorg/react-alert-component/branch/master/graph/badge.svg)](https://codecov.io/gh/source4societyorg/react-alert-component)
 
-For more information on how to use submodules, refer to the [git submodule reference](https://git-scm.com/docs/git-submodule) and this article from [TechJini](http://www.techjini.com/blog/working-with-git-submodules/)
+# Installation
 
-## Setup
+    npm install @source4society/react-alert-component
 
-This module depends upon a styled-component being created in your `styles` folder called `AlertStyle`. This will allow you to apply custom styling to your component on an app by app basis. The styled-component will receive props for `alertType` and `iconClass`. 
+or
 
-## Example
+    yarn add @source4society/react-alert-component
 
-To use, simply pass the relevant props and the alert to be displayed as a child node (note: glyphicons must be installed for this example to work):
+## accepted props
 
-    <Alert alertType={'danger'} iconClass={'glyhpicon glyphicon-ok'}>Your alert message here </Alert>
+    alertType   // String, The type of alert such as info, warning, or error. This will dictate the style
+    className   // Custom class name to be appended to alert. Useful for overidding the default styles.
+    showIcon    // Determines whether or not a span tag with iconClass is rendered
+    iconClass   // The class name for the span tag if the showIcon property is set
+
+The message displayed by the alert is simply wrapped by the alert tag or passed as a child.
